@@ -35,3 +35,6 @@ out/
 /h2/
 /h2
 h2/
+
+src/main/resources/static/css
+src/main/resources/static/js
