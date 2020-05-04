@@ -9,6 +9,7 @@ import jpa.shop.jpashop.domain.Delivery;
 import jpa.shop.jpashop.domain.Member;
 import jpa.shop.jpashop.domain.Order;
 import jpa.shop.jpashop.domain.OrderItem;
+import jpa.shop.jpashop.domain.OrderSearch;
 import jpa.shop.jpashop.domain.item.Item;
 import jpa.shop.jpashop.repository.ItemRepository;
 import jpa.shop.jpashop.repository.MemberRepository;
@@ -66,7 +67,7 @@ public class OrderService {
         order.cancel();
     }
 
-    // public List<Order> findOrders(OrderSearch orderSearch) {
-    //     return orderRepository.findAll(orderSearch);
-    // }
+    public List<Order> findOrders(OrderSearch orderSearch) {
+        return orderRepository.findAllByString(orderSearch);
+    }
 }
